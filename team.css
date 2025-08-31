@@ -1,0 +1,16 @@
+.team .social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .team .social-links a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .team .social-links a img:hover {
+    transform: scale(1.2);
+  }

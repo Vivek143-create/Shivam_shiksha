@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Shivam Shiksha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container"><img src="logo.jpg" alt="Shivam Shiksha Samiti Logo" class="logo-img"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quick-actions">
+            <a class="qa-btn" href="donate.html">Donate</a>
+            <a class="qa-btn" href="volunteer.html">Volunteer</a>
+            <a class="qa-btn" href="events.html">Events</a>
+            <a class="qa-btn" href="contact.html">Contact</a>
+        </div>
+        <section class="feedback">
+            <h1>Share Your Feedback</h1>
+            <p>We value your feedback! Help us improve our services and make a greater impact in our community.</p>
+            
+            <form id="feedbackForm" class="feedback-form">
+                <div class="form-group">
+                    <label for="feedbackName">Your Name *</label>
+                    <input type="text" id="feedbackName" name="feedbackName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackEmail">Email Address *</label>
+                    <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackCategory">Feedback Category *</label>
+                    <select id="feedbackCategory" name="feedbackCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="website">Website Experience</option>
+                        <option value="events">Events & Programs</option>
+                        <option value="donation">Donation Process</option>
+                        <option value="volunteer">Volunteer Experience</option>
+                        <option value="communication">Communication</option>
+                        <option value="impact">Community Impact</option>
+                        <option value="suggestions">Suggestions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Overall Rating *</label>
+                    <div class="rating-container">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                        <span class="rating-text">Click to rate</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackTitle">Feedback Title *</label>
+                    <input type="text" id="feedbackTitle" name="feedbackTitle" required placeholder="Brief title for your feedback">
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackDescription">Detailed Feedback *</label>
+                    <textarea id="feedbackDescription" name="feedbackDescription" rows="6" required placeholder="Please provide detailed feedback about your experience..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackImprovements">Suggestions for Improvement</label>
+                    <textarea id="feedbackImprovements" name="feedbackImprovements" rows="4" placeholder="Any suggestions on how we can improve our services?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="feedbackAnonymous" name="feedbackAnonymous">
+                        Submit anonymously
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="feedbackContact" name="feedbackContact">
+                        I would like to be contacted about this feedback
+                    </label>
+                </div>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+            
+            <div id="feedbackThankYou" class="success-message" style="display:none;">
+                <h3>Thank You for Your Feedback!</h3>
+                <p>Your feedback has been submitted successfully. We appreciate your input and will use it to improve our services.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Shivam Shiksha</h4>
+                <a href="about.html">About Us</a>
+                <a href="team.html">Team</a>
+                <a href="testimonials.html">Testimonials</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <a href="donate.html">Donate</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="events.html">Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© <span id="year"></span> Shivam Shiksha. All rights reserved.</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html> 

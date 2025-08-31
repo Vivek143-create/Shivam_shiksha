@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Shivam Shiksha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container"><img src="logo.jpg" alt="Shivam Shiksha Samiti Logo" class="logo-img"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quick-actions">
+            <a class="qa-btn" href="donate.html">Donate</a>
+            <a class="qa-btn" href="volunteer.html">Volunteer</a>
+            <a class="qa-btn" href="events.html">Events</a>
+            <a class="qa-btn" href="contact.html">Contact</a>
+        </div>
+        <section class="gallery">
+            <h1>Gallery</h1>
+            <div class="gallery-grid">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.35_cd1cd2c9.jpg" alt="WhatsApp Image 1" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.38_2d301f41.jpg" alt="WhatsApp Image 2" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.38_9f8f88a2.jpg" alt="WhatsApp Image 3" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.36_3a628bf9.jpg" alt="WhatsApp Image 4" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.35_47dcda89.jpg" alt="WhatsApp Image 5" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.35_ca688dc8.jpg" alt="WhatsApp Image 6" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.22.43_bbf452a9.jpg" alt="WhatsApp Image 7" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.56.20_fa76dc08.jpg" alt="WhatsApp Image 8" onclick="openModal(this)">
+                <img src="WhatsApp Image 2025-07-18 at 11.56.20_b2a0f960.jpg" alt="WhatsApp Image 9" onclick="openModal(this)">
+            </div>
+            <div id="galleryModal" class="gallery-modal" onclick="closeModal(event)">
+                <span class="gallery-modal-close" onclick="closeModal(event)">&times;</span>
+                <img class="gallery-modal-content" id="galleryModalImg" alt="Large Gallery Image">
+                <div id="galleryModalCaption" class="gallery-modal-caption"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Shivam Shiksha</h4>
+                <a href="about.html">About Us</a>
+                <a href="team.html">Team</a>
+                <a href="testimonials.html">Testimonials</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <a href="donate.html">Donate</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="events.html">Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© <span id="year"></span> Shivam Shiksha. All rights reserved.</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById('galleryModal');
+            var modalImg = document.getElementById('galleryModalImg');
+            var caption = document.getElementById('galleryModalCaption');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            caption.innerText = img.alt;
+        }
+        function closeModal(event) {
+            if (event.target.classList.contains('gallery-modal') || event.target.classList.contains('gallery-modal-close')) {
+                document.getElementById('galleryModal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Shivam Shiksha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container"><img src="logo.jpg" alt="Shivam Shiksha Samiti Logo" class="logo-img"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="quick-actions">
+            <a class="qa-btn" href="donate.html">Donate</a>
+            <a class="qa-btn" href="volunteer.html">Volunteer</a>
+            <a class="qa-btn" href="events.html">Events</a>
+            <a class="qa-btn" href="contact.html">Contact</a>
+        </div>
+        <section class="newsletter">
+            <h1>Stay Connected</h1>
+            <div class="newsletter-info">
+                <div class="newsletter-description">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with our latest news, events, and impact stories. Get monthly updates about:</p>
+                    <ul>
+                        <li>Upcoming events and programs</li>
+                        <li>Success stories from our community</li>
+                        <li>Volunteer opportunities</li>
+                        <li>Donation impact reports</li>
+                        <li>Educational resources and tips</li>
+                    </ul>
+                    <p><strong>Frequency:</strong> Monthly (you can unsubscribe anytime)</p>
+                </div>
+                
+                <form id="newsletterForm" class="newsletter-form">
+                    <h3>Subscribe Now</h3>
+                    <div class="form-group">
+                        <label for="newsletterName">Full Name *</label>
+                        <input type="text" id="newsletterName" name="newsletterName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newsletterEmail">Email Address *</label>
+                        <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newsletterInterests">Areas of Interest</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="events"> Events & Programs
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="volunteer"> Volunteer Opportunities
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="donations"> Donation Updates
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="education"> Educational Content
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="impact"> Impact Stories
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletterConsent" name="newsletterConsent" required>
+                            I agree to receive email newsletters from Shivam Shiksha. I understand I can unsubscribe at any time.
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Subscribe to Newsletter</button>
+                </form>
+            </div>
+            
+            <div id="newsletterThankYou" class="success-message" style="display:none;">
+                <h3>Welcome to Our Community!</h3>
+                <p>Thank you for subscribing to our newsletter. You'll receive our first update soon!</p>
+                <p><small>If you don't see our email, please check your spam folder.</small></p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Shivam Shiksha</h4>
+                <a href="about.html">About Us</a>
+                <a href="team.html">Team</a>
+                <a href="testimonials.html">Testimonials</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <a href="donate.html">Donate</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="events.html">Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© <span id="year"></span> Shivam Shiksha. All rights reserved.</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html> 
